@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/dubbosample1.iml" filepath="$PROJECT_DIR$/dubbosample1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbosampleapi/dubbosampleapi.iml" filepath="$PROJECT_DIR$/dubbosampleapi/dubbosampleapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbosampleconsumer/dubbosampleconsumer.iml" filepath="$PROJECT_DIR$/dubbosampleconsumer/dubbosampleconsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbosampleprovider/dubbosampleprovider.iml" filepath="$PROJECT_DIR$/dubbosampleprovider/dubbosampleprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dubbosampleprovider2/dubbosampleprovider2.iml" filepath="$PROJECT_DIR$/dubbosampleprovider2/dubbosampleprovider2.iml" />
+    </modules>
+  </component>
+</project>
