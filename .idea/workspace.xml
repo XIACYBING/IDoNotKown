@@ -2,68 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a1c67884-686b-4139-a279-0b9d96a2cc49" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleapi/target/classes/com/hk/xia/dubbo/sample/api/DubboService.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/target/classes/com/hk/xia/sample/consumer/Consumer.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/target/classes/com/hk/xia/sample/consumer/DubboServiceConsumerImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/target/classes/com/hk/xia/dubbo/sample/provider/DubboServiceImpl.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/target/classes/com/hk/xia/dubbo/sample/provider/Provider.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/target/classes/com/hk/xia/dubbo/sample/providerTwo/DubboServiceImplTwo.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/target/classes/com/hk/xia/dubbo/sample/providerTwo/ProviderTwo.class" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/dubbo_sample_api_war_exploded.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_code_gson_gson_2_8_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_guava_guava_16_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_3_7_0_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_all_4_1_25_Final.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jline_jline_0_9_94.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_client_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_framework_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_curator_curator_recipes_2_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_dubbo_dubbo_2_7_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_zookeeper_zookeeper_3_4_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_24.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_16_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_16_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_16_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_16_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_16_RELEASE.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_yaml_snakeyaml_1_20.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/READMY.MD" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosample1.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleapi/dubbosampleapi.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleapi/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleapi/src/main/java/com/hk/xia/dubbo/sample/api/DubboService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/dubbosampleconsumer.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/src/main/java/com/hk/xia/sample/consumer/Consumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/src/main/java/com/hk/xia/sample/consumer/DubboServiceConsumerImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/src/main/resources/META-INF/spring/dubbo-demo-consumer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleconsumer/target/classes/META-INF/spring/dubbo-demo-consumer.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/dubbosampleprovider.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/src/main/java/com/hk/xia/dubbo/sample/provider/DubboServiceImpl.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/src/main/java/com/hk/xia/dubbo/sample/provider/Provider.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/src/main/resources/META-INF/spring/dubbo-demo-provider.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/src/main/resources/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/target/classes/META-INF/spring/dubbo-demo-provider.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider/target/classes/log4j.properties" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/dubbosampleprovider2.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/pom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/src/main/java/com/hk/xia/dubbo/sample/providerTwo/DubboServiceImplTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/src/main/java/com/hk/xia/dubbo/sample/providerTwo/ProviderTwo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/src/main/resources/META-INF/spring/dubbo-demo-provider2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dubbosampleprovider2/target/classes/META-INF/spring/dubbo-demo-provider2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/LICENSE" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/READMY.MD" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -107,19 +49,6 @@
               <caret line="17" column="96" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="17" selection-end-column="96" />
               <folding />
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dubbosampleprovider2/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="55" column="21" lean-forward="false" selection-start-line="55" selection-start-column="21" selection-end-line="55" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="MavenHelperPluginDependencyAnalyzer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -190,15 +119,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="READMY.MD" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/READMY.MD">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="88">
-                <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+                <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
                 <folding />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="dubbosample1.iml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/dubbosample1.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -257,6 +196,7 @@
         <option value="$PROJECT_DIR$/dubbosampleconsumer/src/main/resources/META-INF/spring/dubbo-demo-consumer.xml" />
         <option value="$PROJECT_DIR$/READMY.MD" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -945,12 +885,12 @@
       <updated>1563500926242</updated>
       <workItem from="1563500929996" duration="11891000" />
       <workItem from="1563518414884" duration="1013000" />
-      <workItem from="1563519453084" duration="5059000" />
+      <workItem from="1563519453084" duration="5663000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17963000" />
+    <option name="totallyTimeSpent" value="18567000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="0" />
@@ -1242,14 +1182,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dubbosample1.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dubbosampleconsumer/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1201">
@@ -1365,17 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/READMY.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="88">
-            <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dubbosampleprovider2/src/main/java/com/hk/xia/dubbo/sample/providerTwo/ProviderTwo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1383,6 +1304,36 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/READMY.MD">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="88">
+            <caret line="4" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="35" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="88">
+            <caret line="4" column="35" lean-forward="false" selection-start-line="4" selection-start-column="35" selection-end-line="4" selection-end-column="35" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dubbosample1.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
