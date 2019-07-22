@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xmlns="http://www.springframework.org/schema/beans"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+       http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <dubbo:application name="demo-consumer" >
+        <!--<dubbo:parameter key="qos.enable" value="true" />
+        <dubbo:parameter key="qos.accept.foreign.ip" value="false" />
+        <dubbo:parameter key="qos.port" value="33333" />-->
+    </dubbo:application>
+    <!--将自己作为Provider注册-->
+    <dubbo:registry address="zookeeper://localhost:2181" />
+    <dubbo:protocol name="dubbo" port="20881" />
+    <!--声明自己的微服务接口-->
+    <!--<bean id="demoComsumer" class="com.hk.xia.sample.consumer.DubboServiceConsumerImpl" />
+    <dubbo:service interface="com.hk.xia.dubbo.sample.api.DubboService" ref="demoComsumer" />-->
+    <!--调用对应的微服务-->
+    <dubbo:reference id="demoService" check="false" interface="com.hk.xia.dubbo.sample.api.DubboService"/>
+
+</beans>
