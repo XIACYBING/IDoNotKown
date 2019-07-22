@@ -10,13 +10,14 @@
         <dubbo:parameter key="qos.accept.foreign.ip" value="false" />
         <dubbo:parameter key="qos.port" value="33333" />-->
     </dubbo:application>
-    <!--将自己作为Provider注册-->
+    <!--标明注册中心地址-->
     <dubbo:registry address="zookeeper://localhost:2181" />
-    <dubbo:protocol name="dubbo" port="20881" />
+    <!--<dubbo:registry address="multicast://224.5.6.7:1234?unicast=false" />-->
+    <!--<dubbo:protocol name="dubbo" port="20881" />-->
     <!--声明自己的微服务接口-->
     <!--<bean id="demoComsumer" class="com.hk.xia.sample.consumer.DubboServiceConsumerImpl" />
     <dubbo:service interface="com.hk.xia.dubbo.sample.api.DubboService" ref="demoComsumer" />-->
     <!--调用对应的微服务-->
-    <dubbo:reference id="demoService" check="false" interface="com.hk.xia.dubbo.sample.api.DubboService"/>
+    <dubbo:reference id="demoService" check="false" interface="com.hk.xia.dubbo.sample.api.DubboService" />
 
 </beans>
