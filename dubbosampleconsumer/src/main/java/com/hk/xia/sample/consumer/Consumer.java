@@ -1,7 +1,11 @@
 package com.hk.xia.sample.consumer;
 
 import com.hk.xia.dubbo.sample.api.DubboService;
+import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
 
@@ -11,6 +15,8 @@ import java.io.IOException;
  * @description
  */
 public class Consumer {
+
+    private static Logger logger = LoggerFactory.getLogger(Consumer.class);
 
     public static void main(String[] args) throws IOException {
         System.setProperty("java.net.preferIPv4Stack", "true");
@@ -24,6 +30,13 @@ public class Consumer {
         System.out.println(hello);
 
         System.in.read();
+    }
+
+    @Test
+    public void testJedis(){
+        Jedis jedis = new Jedis();
+        jedis.set("Jedis","testSucccess");
+        System.out.println("Jedis" + jedis.get("Jedis"));
     }
 
 }
