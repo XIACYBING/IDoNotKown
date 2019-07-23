@@ -1,6 +1,8 @@
 package com.hk.xia.sample.consumer;
 
 import com.hk.xia.dubbo.sample.api.DubboService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author wang.yubin
@@ -9,8 +11,11 @@ import com.hk.xia.dubbo.sample.api.DubboService;
  */
 public class DubboServiceConsumerImpl implements DubboService {
 
+    private static Logger logger = LoggerFactory.getLogger(DubboServiceConsumerImpl.class);
+
     @Override
     public String dubboSayHello(String str) {
+        logger.info("作为Provider的Consumer被调用");
         return "Dubbo Consumer Provider,say:" + str;
     }
 
