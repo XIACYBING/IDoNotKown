@@ -1,6 +1,8 @@
 package com.hk.xia.dubbo.sample.provider;
 
 import com.hk.xia.dubbo.sample.api.DubboService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  * @author wang.yubin
@@ -9,9 +11,11 @@ import com.hk.xia.dubbo.sample.api.DubboService;
  */
 public class DubboServiceImpl implements DubboService {
 
+    private static Logger logger = LoggerFactory.getLogger(DubboServiceImpl.class);
+
     @Override
     public String dubboSayHello(String str) {
-        System.out.println("dubboSayHelloIn");
+        logger.info("dubbosampleprovider.DubboServiceImpl.dubboSayHello()......");
         return "Dubbo Provider Say:" + str;
     }
 }
