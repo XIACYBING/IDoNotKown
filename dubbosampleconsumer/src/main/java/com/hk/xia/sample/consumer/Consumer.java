@@ -5,9 +5,11 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import redis.clients.jedis.Client;
 import redis.clients.jedis.Jedis;
 
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @author wang.yubin
@@ -34,9 +36,10 @@ public class Consumer {
 
     @Test
     public void testJedis(){
-        Jedis jedis = new Jedis();
+        Jedis jedis = new Jedis("127.0.0.1",6379);
         jedis.set("Jedis","testSucccess");
         System.out.println("Jedis" + jedis.get("Jedis"));
+        jedis.close();
     }
 
 }
