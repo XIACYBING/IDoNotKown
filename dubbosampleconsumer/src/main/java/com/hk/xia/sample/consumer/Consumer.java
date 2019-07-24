@@ -6,10 +6,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import redis.clients.jedis.Client;
+import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
+import redis.clients.jedis.JedisCluster;
 
 import java.io.IOException;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author wang.yubin
@@ -40,6 +44,22 @@ public class Consumer {
         jedis.set("Jedis","testSucccess");
         System.out.println("Jedis" + jedis.get("Jedis"));
         jedis.close();
+    }
+
+    @Test
+    public void testJedisCluster() throws IOException {
+        Set<HostAndPort> hapSet = new HashSet<HostAndPort>();
+        hapSet.add(new HostAndPort("127.0.0.1",7001));
+        hapSet.add(new HostAndPort("127.0.0.1",7002));
+        hapSet.add(new HostAndPort("127.0.0.1",7003));
+        hapSet.add(new HostAndPort("127.0.0.1",7004));
+        hapSet.add(new HostAndPort("127.0.0.1",7005));
+        hapSet.add(new HostAndPort("127.0.0.1",7006));
+        JedisCluster cluster = new JedisCluster(hapSet);
+        cluster.set("cluster","Cluster test Success");
+        String str = cluster.get("cluster");
+        System.out.println("Cluster:" + str);
+        cluster.close();
     }
 
 }
