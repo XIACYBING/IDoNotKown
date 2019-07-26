@@ -13,6 +13,8 @@
         <module>dubbosampleprovider</module>
         <module>dubbosampleconsumer</module>
         <module>dubbosampleprovider2</module>
+        <module>rocketMqsampleproducer</module>
+        <module>rocketMqsampleconsumer</module>
     </modules>
 
 
