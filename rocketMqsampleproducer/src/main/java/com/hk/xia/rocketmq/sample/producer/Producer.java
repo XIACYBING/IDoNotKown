@@ -3,6 +3,7 @@ package com.hk.xia.rocketmq.sample.producer;
 import org.apache.rocketmq.client.producer.DefaultMQProducer;
 import org.apache.rocketmq.client.producer.SendResult;
 import org.apache.rocketmq.common.message.Message;
+import org.apache.rocketmq.common.message.MessageQueue;
 import org.apache.rocketmq.remoting.common.RemotingHelper;
 
 import java.util.Date;
@@ -26,10 +27,12 @@ public class Producer {
         System.out.println("Producer started...");
         /*发送结果类*/
         SendResult sendResult;
+        /*指定消息要发送到的队列*/
+        MessageQueue queue = new MessageQueue("topic_sample_Java","HKSERVER-PC",0);
         for (int i=0; i<PRODUCE_NUMBER; i++){
             /*消息类，三个参数分别是topic、tag和body，topic可以看成消息的一级分类，tag是二级分类，body是消息实体*/
-            Message message = new Message("topic_sample_Java","TagA",(new Date() + "Hello RocketMQ sample : "+i).getBytes(RemotingHelper.DEFAULT_CHARSET));
-            sendResult = producer.send(message);
+            Message message = new Message("topic_sample_Java","TagA",(new Date() + "Hello RocketMQ Double Sample : "+i).getBytes(RemotingHelper.DEFAULT_CHARSET));
+            sendResult = producer.send(message,queue);
             System.out.println(new Date() + ":" + i);
             /*输出发送结果*/
             System.out.println(sendResult.toString());

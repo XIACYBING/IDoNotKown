@@ -15,7 +15,7 @@
     <!--<dubbo:registry address="multicast://224.5.6.7:1234?unicast=false" />-->
     <!--<dubbo:protocol name="dubbo" port="20881" />-->
     <!--声明自己的微服务接口-->
-    <!--<bean id="demoComsumer" class="com.hk.xia.sample.consumer.DubboServiceConsumerImpl" />
+    <!--<bean id="demoComsumer" claDubboServiceConsumerImplImpl" />
     <dubbo:service interface="com.hk.xia.dubbo.sample.api.DubboService" ref="demoComsumer" />-->
     <!--调用对应的微服务-->
     <dubbo:reference id="demoService" check="false" interface="com.hk.xia.dubbo.sample.api.DubboService" />

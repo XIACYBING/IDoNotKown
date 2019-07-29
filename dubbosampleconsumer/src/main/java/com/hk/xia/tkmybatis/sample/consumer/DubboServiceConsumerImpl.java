@@ -1,4 +1,4 @@
-package com.hk.xia.sample.consumer;
+package com.hk.xia.tkmybatis.sample.consumer;
 
 import com.hk.xia.dubbo.sample.api.DubboService;
 import org.slf4j.Logger;

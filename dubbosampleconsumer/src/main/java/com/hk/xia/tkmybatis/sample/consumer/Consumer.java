@@ -1,18 +1,16 @@
-package com.hk.xia.sample.consumer;
+package com.hk.xia.tkmybatis.sample.consumer;
 
 import com.hk.xia.dubbo.sample.api.DubboService;
 import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import redis.clients.jedis.Client;
 import redis.clients.jedis.HostAndPort;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisCluster;
 
 import java.io.IOException;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 /**
