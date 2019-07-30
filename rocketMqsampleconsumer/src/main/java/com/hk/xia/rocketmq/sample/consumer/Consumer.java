@@ -59,7 +59,7 @@ public class Consumer {
         pushConsumer.registerMessageListener(messageListenerOrderly);
 
         /*并行消费*/
-        /*MessageListenerConcurrently messageListener = new MessageListenerConcurrently() {
+        MessageListenerConcurrently messageListener = new MessageListenerConcurrently() {
             @Override
             public ConsumeConcurrentlyStatus consumeMessage(List<MessageExt> list, ConsumeConcurrentlyContext consumeConcurrentlyContext) {
                 if (list != null){
@@ -68,13 +68,15 @@ public class Consumer {
                             System.out.println(System.currentTimeMillis() + " : " + new String(ext.getBody(),"UTF-8"));
                         } catch (UnsupportedEncodingException e) {
                             System.out.println("ERROR!Error Message is :" + e.getMessage());
+                            /*消费异常，需要重新消费*/
+                            return ConsumeConcurrentlyStatus.RECONSUME_LATER;
                         }
                     }
                 }
                 return ConsumeConcurrentlyStatus.CONSUME_SUCCESS;
             }
         };
-        pushConsumer.registerMessageListener(messageListener);*/
+        pushConsumer.registerMessageListener(messageListener);
 
         pushConsumer.start();
         System.out.println("Consumer started...");

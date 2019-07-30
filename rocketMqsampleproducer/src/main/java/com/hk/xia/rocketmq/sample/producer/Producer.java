@@ -27,7 +27,7 @@ public class Producer {
         System.out.println("Producer started...");
         /*发送结果类*/
         SendResult sendResult;
-        /*指定消息要发送到的队列*/
+        /*指定消息要发送到的队列，可以顺序消费*/
         MessageQueue queue = new MessageQueue("topic_sample_Java","HKSERVER-PC",0);
         for (int i=0; i<PRODUCE_NUMBER; i++){
             /*消息类，三个参数分别是topic、tag和body，topic可以看成消息的一级分类，tag是二级分类，body是消息实体*/
@@ -37,8 +37,8 @@ public class Producer {
             /*输出发送结果*/
             System.out.println(sendResult.toString());
         }
-        System.out.println("Producer stoping...");
-        producer.shutdown();
+        /*System.out.println("Producer stoping...");
+        producer.shutdown();*/
     }
 
 }

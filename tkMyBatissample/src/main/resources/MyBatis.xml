@@ -2,12 +2,17 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 
+    <settings>
+        <!--开启Log4j支持-->
+        <setting name="logImpl" value="LOG4J"/>
+    </settings>
+
     <environments default="MySQL">
         <environment id="MySQL">
             <transactionManager type="JDBC"></transactionManager>
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
-                <property name="url" value="jdbc:mysql://localhost:3306/myBatisCompare?characterEncoding=utf8" />
+                <property name="url" value="jdbc:mysql://localhost:3306/myBatisCompare?characterEncoding=utf8&amp;useSSL=false" />
                 <property name="username" value="root" />
                 <property name="password" value="root" />
             </dataSource>
@@ -15,7 +20,10 @@
     </environments>
     
     <mappers>
-        <package name="com.hk.xia.tkMyBatis.sample" />
+        <!--<package name="com.hk.xia.tkmybatis.sample.mapper" />-->
+        <!--<mapper resource="com/hk/xia/tkmybatis/sample/mapper/EmployeeMapper.xml" />-->
+        <mapper class="com.hk.xia.tkmybatis.sample.mapper.EmployeeMapper" />
+        <mapper class="com.hk.xia.tkmybatis.sample.mapper.EmployerMapper" />
     </mappers>
 
 </configuration>
