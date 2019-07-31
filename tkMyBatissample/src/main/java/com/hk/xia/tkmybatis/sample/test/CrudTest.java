@@ -23,9 +23,9 @@ public class CrudTest {
 
     private static final Logger logger = LoggerFactory.getLogger(CrudTest.class);
 
-    private static final Long MIN_DELETE_NUMBER = 120350L;
+    private static final Long MIN_CRUD_NUMBER = 120350L;
 
-    private static final Long MAX_DELETE_NUMBER = 130350L;
+    private static final Long MAX_CRUD_NUMBER = 130350L;
 
     private static final int LOOP_START = 0;
 
@@ -50,7 +50,7 @@ public class CrudTest {
             EmployerMapper employerMapper = sqlSession.getMapper(EmployerMapper.class);
 
             startTime = System.currentTimeMillis();
-            for (Long l = MIN_DELETE_NUMBER;l < MAX_DELETE_NUMBER;l++){
+            for (Long l = MIN_CRUD_NUMBER;l < MAX_CRUD_NUMBER;l++){
                 /*插入数据*/
                 /*employer.setbName("insertName" + l);
                 employerMapper.insert(employer);*/
@@ -59,12 +59,12 @@ public class CrudTest {
                 /*employerMapper.selectByPrimaryKey(l);*/
 
                 /*更新名称*/
-                /*employer.setbId(l);
+                employer.setbId(l);
                 employer.setbName("insertBName" + l);
-                employerMapper.updateByPrimaryKey(employer);*/
+                employerMapper.updateByPrimaryKey(employer);
 
                 /*删除数据*/
-                employerMapper.deleteByPrimaryKey(l);
+                /*employerMapper.deleteByPrimaryKey(l);*/
 
             }
             endTime = System.currentTimeMillis();
