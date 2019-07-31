@@ -10,6 +10,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import sun.dc.pr.PRError;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,22 +26,14 @@ public class MyBatisPlusTest {
 
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("MyBatis.xml");
-        SqlSessionFactory sessionFactory = new MybatisSqlSessionFactoryBuilder().build(inputStream,null,null);
+        SqlSessionFactory sessionFactory = new MybatisSqlSessionFactoryBuilder().build(inputStream, null, null);
         SqlSession sqlSession = sessionFactory.openSession(false);
         EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
-        Employee employee = employeeMapper.selectById(14L);
-        logger.info(employee.toString());
 
-        logger.info("Employer 。。。。");
-        Employer employer = new Employer();
-        logger.info(employer.toString());
 
-        /*employer.setbName("BossSeven");
-        employer.setbId(7L);
-        boolean result = employer.insert();
-        logger.info("InsertResult : {}",result);*/
 
         sqlSession.close();
+
     }
 
 }

@@ -45,7 +45,7 @@ public class MyBatisTest {
         //配置完成后，执行下面的操作
         mapperHelper.processConfiguration(sqlSession.getConfiguration());
 
-    /*Employee操作*/
+        /*Employee操作*/
         EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
         Employee employeeInfo = new Employee();
         employeeInfo.seteId(2L);
