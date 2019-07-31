@@ -6,7 +6,7 @@ import com.hk.xia.mybatisplus.pojo.Employee;
 /**
  * @author wang.yubin
  * @date 2019/7/30
- * @description
+ * @description 雇员类的Mapper
  */
 public interface EmployeeMapper extends BaseMapper<Employee> {
 }

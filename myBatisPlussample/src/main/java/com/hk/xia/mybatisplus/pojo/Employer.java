@@ -1,37 +1,34 @@
 package com.hk.xia.mybatisplus.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.extension.activerecord.Model;
+import com.sun.org.apache.bcel.internal.generic.LOOKUPSWITCH;
+import lombok.Data;
+import lombok.Lombok;
+
+import java.io.Serializable;
+
 /**
  * @author wang.yubin
  * @date 2019/7/30
- * @description
+ * @description 雇主类
  */
-public class Employer {
+@Data
+@TableName(value = "employer")
+public class Employer extends Model<Employer> {
 
+    @TableId(value = "bId",type = IdType.AUTO)
     private Long bId;
 
+    @TableField(value = "bName")
     private String bName;
 
-    public Long getbId() {
+    @Override
+    protected Serializable pkVal(){
         return bId;
     }
 
-    public void setbId(Long bId) {
-        this.bId = bId;
-    }
-
-    public String getbName() {
-        return bName;
-    }
-
-    public void setbName(String bName) {
-        this.bName = bName;
-    }
-
-    @Override
-    public String toString() {
-        return "Employer{" +
-                "bId=" + bId +
-                ", bName='" + bName + '\'' +
-                '}';
-    }
 }

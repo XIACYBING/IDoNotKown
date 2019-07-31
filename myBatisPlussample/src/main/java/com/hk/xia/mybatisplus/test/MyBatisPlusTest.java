@@ -1,18 +1,18 @@
 package com.hk.xia.mybatisplus.test;
 
+import com.baomidou.mybatisplus.core.MybatisSqlSessionFactoryBuilder;
 import com.hk.xia.mybatisplus.mapper.EmployeeMapper;
 
 import com.hk.xia.mybatisplus.pojo.Employee;
+import com.hk.xia.mybatisplus.pojo.Employer;
 import org.apache.ibatis.io.Resources;
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
-import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.List;
 
 /**
  * @author wang.yubin
@@ -25,13 +25,22 @@ public class MyBatisPlusTest {
 
     public static void main(String[] args) throws IOException {
         InputStream inputStream = Resources.getResourceAsStream("MyBatis.xml");
-        SqlSessionFactory factory = new SqlSessionFactoryBuilder().build(inputStream);
-        SqlSession sqlSession = factory.openSession(false);
+        SqlSessionFactory sessionFactory = new MybatisSqlSessionFactoryBuilder().build(inputStream,null,null);
+        SqlSession sqlSession = sessionFactory.openSession(false);
         EmployeeMapper employeeMapper = sqlSession.getMapper(EmployeeMapper.class);
-        List<Employee>  listEmployee = employeeMapper.selectList(null);
-        for (Employee ee : listEmployee){
-            logger.info("{}",ee.toString());
-        }
+        Employee employee = employeeMapper.selectById(14L);
+        logger.info(employee.toString());
+
+        logger.info("Employer 。。。。");
+        Employer employer = new Employer();
+        logger.info(employer.toString());
+
+        /*employer.setbName("BossSeven");
+        employer.setbId(7L);
+        boolean result = employer.insert();
+        logger.info("InsertResult : {}",result);*/
+
+        sqlSession.close();
     }
 
 }
