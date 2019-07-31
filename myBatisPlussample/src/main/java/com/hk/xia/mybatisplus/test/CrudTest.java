@@ -72,7 +72,7 @@ public class CrudTest {
             count += milli;
         }
         logger.info(millisTime.toString());
-        logger.info("Average millis : {}",count/10);
+        logger.info("Average millis : {}",(double)count/10);
     }
 
 }
