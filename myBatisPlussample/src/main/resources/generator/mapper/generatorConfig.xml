@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <context id="codeGenerator" targetRuntime="MyBatis3Simple" defaultModelType="flat">
+        <property name="javaFileEncoding" value="UTF8"/>
+        <!--不可使用该属性，否则会无法生成@Id和@Column等注解，只有@Table-->
+        <!--<property name="useMapperCommentGenerator" value="false"/>-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+        <!--通用 Mapper 插件，可以让生成的实体类带有注解-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="tk.mybatis.mapper.common.Mapper"/>
+            <property name="caseSensitive" value="true"/>
+            <property name="forceAnnotation" value="false"/>
+        </plugin>
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/myBatisCompare?characterEncoding=utf8&amp;useSSL=false"
+                        userId="root"
+                        password="root">
+        </jdbcConnection>
+        <!--使用Java编码模式生成代码时，targetProject要带上项目名，即myBatisPlussample/src/main/java，使用Maven生成代码是不需要-->
+        <javaModelGenerator targetPackage="com.hk.xia.mybatisplus.generator.mapper.pojo" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false" />
+            <property name="constructorBased" value="true" />
+            <property name="immutable" value="false" />
+        </javaModelGenerator>
+        <sqlMapGenerator targetPackage="com.hk.xia.mybatisplus.generator.mapper.mapper" targetProject="src/main/java">
+            <property name="enableSubPackages" value="false" />
+        </sqlMapGenerator>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.hk.xia.mybatisplus.generator.mapper.dao" targetProject="src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <table tableName="hk_employee">
+            <generatedKey column="hkId" sqlStatement="JDBC"/>
+        </table>
+    </context>
+
+</generatorConfiguration>

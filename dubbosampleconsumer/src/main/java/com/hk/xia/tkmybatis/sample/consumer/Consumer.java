@@ -54,7 +54,7 @@ public class Consumer {
         hapSet.add(new HostAndPort("127.0.0.1",7005));
         hapSet.add(new HostAndPort("127.0.0.1",7006));
         JedisCluster cluster = new JedisCluster(hapSet);
-        cluster.set("cluster","Cluster test Success");
+        cluster.set("cluster","Cluster generator Success");
         String str = cluster.get("cluster");
         System.out.println("Cluster:" + str);
         cluster.close();
