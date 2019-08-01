@@ -20,6 +20,7 @@ public class Employer {
     private String bName;
 
     public Employer() {
+
     }
 
     public Employer(Long bId) {

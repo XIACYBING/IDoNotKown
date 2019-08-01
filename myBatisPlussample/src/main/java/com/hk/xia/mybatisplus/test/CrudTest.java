@@ -45,17 +45,17 @@ public class CrudTest {
             startTime = System.currentTimeMillis();
             for (Long l = MIN_CRUD_NUMBER;l < MAX_CRUD_NUMBER;l++){
                 /*插入数据*/
-                /*employee.setEName("insertName" + i);
+                employee.setEName("insertName" + i);
                 employee.setStageName("insertStageName" + i);
-                employeeMapper.insert(employee);*/
+                employeeMapper.insert(employee);
 
                 /*查询出的数据并不需要使用，所以不作处理*/
                 /*employeeMapper.selectById(l);*/
 
                 /*更新名称*/
-                employee.setEId(l);
+                /*employee.setEId(l);
                 employee.setEName("inserrNNnNNnN" + l);
-                employeeMapper.updateById(employee);
+                employeeMapper.updateById(employee);*/
 
                 /*删除数据*/
                 /*employeeMapper.deleteById(l);*/
