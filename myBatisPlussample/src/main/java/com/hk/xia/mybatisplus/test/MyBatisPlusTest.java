@@ -66,6 +66,7 @@ public class MyBatisPlusTest {
             SqlSession sqlSession = sessionFactory.openSession(false);
             Long startTime = System.currentTimeMillis();
             employeeService.saveBatch(listEe);
+
             Long endTime = System.currentTimeMillis();
             sqlSession.close();
             time[i] = endTime - startTime;
