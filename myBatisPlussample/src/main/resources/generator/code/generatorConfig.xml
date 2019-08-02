@@ -14,54 +14,49 @@
             <property name="templatePath" value="generator/mapper.ftl"/>
             <property name="mapperSuffix" value="Dao"/>
             <property name="fileName" value="${tableClass.shortClassName}${mapperSuffix}.java"/>
+            <property name="templateFormatter" value="tk.mybatis.mapper.generator.formatter.FreemarkerTemplateFormatter"/>
         </plugin>
         <!--mapper.xml-->
         <plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
-            <property name="targetProject" value="src/main/resources"/>
+            <property name="targetProject" value="src/main/java"/>
             <property name="targetPackage" value="com.hk.xia.mybatisplus.generator.code.mapper"/>
-            <property name="mapperPackage" value="mapper"/>
+            <property name="mapperPackage" value="com.hk.xia.mybatisplus.generator.code.dao"/>
             <property name="templatePath" value="generator/mapperXml.ftl"/>
             <property name="mapperSuffix" value="Dao"/>
             <property name="fileName" value="${tableClass.shortClassName}${mapperSuffix}.xml"/>
+            <property name="templateFormatter" value="tk.mybatis.mapper.generator.formatter.FreemarkerTemplateFormatter"/>
         </plugin>
         <!--测试输出单个文件，每个表都会生成一个对应的文件-->
-        <plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
-            <property name="targetProject" value="src/main/resources"/>
+        <!--<plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
+            <property name="targetProject" value="src/main/java"/>
             <property name="targetPackage" value="com.hk.xia.mybatisplus.generator.code"/>
             <property name="templatePath" value="generator/test-one.ftl"/>
             <property name="fileName" value="${tableClass.shortClassName}Test.txt"/>
-            <!--默认值是下面这个，可以不配置-->
+            &lt;!&ndash;默认值BU是下面这个，可以不配置&ndash;&gt;
             <property name="templateFormatter" value="tk.mybatis.mapper.generator.formatter.FreemarkerTemplateFormatter"/>
-        </plugin>
+        </plugin>-->
         <!--测试输出整个文件，所有表都可用，一次只生成一个文件，用于聚合所有表使用-->
-        <plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
+        <!--<plugin type="tk.mybatis.mapper.generator.TemplateFilePlugin">
             <property name="singleMode" value="false"/>
             <property name="targetProject" value="src/main/java"/>
             <property name="targetPackage" value="com.hk.xia.mybatisplus.generator.code"/>
             <property name="templatePath" value="generator/test-all.ftl"/>
             <property name="fileName" value="TestAll.txt"/>
-        </plugin>
+            <property name="templateFormatter" value="tk.mybatis.mapper.generator.formatter.FreemarkerTemplateFormatter"/>
+        </plugin>-->
 
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/myBatisCompare?characterEncoding=utf8&amp;useSSL=false"
                         userId="root"
-                        password="root">
-        </jdbcConnection>
+                        password="root"/>
 
-        <javaModelGenerator targetPackage="com.hk.xia.mybatisplus.generator.code.pojo" targetProject="src/main/java">
-            <property name="enableSubPackages" value="false" />
-            <property name="constructorBased" value="true" />
-            <property name="immutable" value="false" />
-        </javaModelGenerator>
-        <sqlMapGenerator targetPackage="com.hk.xia.mybatisplus.generator.code.mapper" targetProject="src/main/java">
-            <property name="enableSubPackages" value="false" />
-        </sqlMapGenerator>
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.hk.xia.mybatisplus.generator.code.dao" targetProject="src/main/java">
-            <property name="enableSubPackages" value="true"/>
-        </javaClientGenerator>
+        <javaModelGenerator targetPackage="com.hk.xia.mybatisplus.generator.code.pojo" targetProject="src/main/java"/>
+        <!--<sqlMapGenerator targetPackage="com.hk.xia.mybatisplus.generator.code.mapper" targetProject="src/main/java"/>
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.hk.xia.mybatisplus.generator.code.dao" targetProject="src/main/java"/>-->
 
-        <table tableName="hk_employee">
-        </table>
+        <table tableName="hk_employee"/>
+        <table tableName="employee"/>
+        <table tableName="employer"/>
     </context>
 
 </generatorConfiguration>
