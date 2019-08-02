@@ -1,7 +1,6 @@
 package com.hk.xia.tkmybatis.sample.mapper;
 
 import com.hk.xia.tkmybatis.sample.pojo.Employee;
-import tk.mybatis.mapper.common.BaseMapper;
 import tk.mybatis.mapper.common.Mapper;
 
 /**

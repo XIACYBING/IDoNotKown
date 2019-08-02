@@ -14,6 +14,7 @@ import com.baomidou.mybatisplus.generator.config.TemplateConfig;
 import com.baomidou.mybatisplus.generator.config.po.TableInfo;
 import com.baomidou.mybatisplus.generator.config.rules.NamingStrategy;
 import com.baomidou.mybatisplus.generator.engine.FreemarkerTemplateEngine;
+import com.baomidou.mybatisplus.generator.engine.VelocityTemplateEngine;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -132,11 +133,16 @@ public class AutoMapperGenerator {
         /*strategy.setSuperControllerClass("com.baomidou.ant.common.BaseController");*/
         // 写于父类中的公共字段
         strategy.setSuperEntityColumns("id");
+        /*读取数据表*/
         strategy.setInclude(scanner("表名，多个英文逗号分割").split(","));
+        /*表名连字符转驼峰*/
         strategy.setControllerMappingHyphenStyle(true);
         strategy.setTablePrefix(pc.getModuleName() + "_");
         mpg.setStrategy(strategy);
+        /*Freemarker引擎*/
         mpg.setTemplateEngine(new FreemarkerTemplateEngine());
+        /*Velocity引擎*/
+        /*mpg.setTemplateEngine(new VelocityTemplateEngine());*/
         mpg.execute();
     }
 
