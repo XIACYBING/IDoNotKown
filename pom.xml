@@ -17,6 +17,7 @@
         <module>rocketMqsampleconsumer</module>
         <module>tkMyBatissample</module>
         <module>myBatisPlussample</module>
+        <module>websample</module>
     </modules>
 
     <build>
