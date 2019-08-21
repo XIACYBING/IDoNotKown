@@ -19,6 +19,7 @@
         <module>myBatisPlussample</module>
         <module>websample</module>
         <module>multithread</module>
+        <module>springconfigsample</module>
     </modules>
 
     <dependencies>
