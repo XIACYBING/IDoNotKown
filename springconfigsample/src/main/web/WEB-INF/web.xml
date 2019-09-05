@@ -9,12 +9,25 @@
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:/springmvc-context.xml</param-value>
+            <!--全配置场景-->
+            <!--<param-value>classpath:/springmvc-context.xml</param-value>-->
+            <!--注解配置场景-->
+            <param-value>classpath:/springmvc-annotation.xml</param-value>
         </init-param>
     </servlet>
     <servlet-mapping>
         <servlet-name>DispatcherServlet</servlet-name>
         <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+    <!--测试@PostConstruct和@PreDestroy注解的Servlet-->
+    <servlet>
+        <servlet-name>constructServlet</servlet-name>
+        <servlet-class>com.hk.xia.spring.servlet.ConstructServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>constructServlet</servlet-name>
+        <url-pattern>/construct</url-pattern>
     </servlet-mapping>
 
 </web-app>

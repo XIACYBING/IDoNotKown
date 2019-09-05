@@ -4,11 +4,11 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
                            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="configControler" class="com.hk.xia.spring.controller.ConfigController"/>
+    <bean id="configController" class="com.hk.xia.spring.controller.ConfigController"/>
     <bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
         <property name="urlMap">
             <map>
-                <entry key="config" value-ref="configControler"/>
+                <entry key="config" value-ref="configController"/>
             </map>
         </property>
     </bean>
