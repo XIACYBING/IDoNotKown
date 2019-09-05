@@ -7,8 +7,13 @@
                            http://www.springframework.org/schema/mvc
                            http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:annotation-config/>
+    <!--<context:annotation-config/>能够激活那些已经在Spring容器中注册过bean-->
+    <!--<context:component-scan/>注解包含<context:annotation-config/>注解的作用-->
+    <!--两者同时存在时，<context:annotation-config/>会被忽略-->
     <context:component-scan base-package="com.hk.xia.spring.controller"/>
+    <!--自动注册HandlerMapping和HandlerAdapter-->
+    <!--该注解自动加载很多参数绑定方法，比如默认的Json转换解析器-->
+    <!--如果使用直接配置HandlerMapping和HandlerAdapter，参数的解析和绑定由HandlerAdapter完成-->
     <mvc:annotation-driven/>
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <property name="prefix" value="/"/>
