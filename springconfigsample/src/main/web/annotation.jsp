@@ -10,5 +10,9 @@
 </head>
 <body>
     <h1>Annotation</h1>
+    <h2>${model}</h2>
+    <h2>${modelMap}</h2>
+    <h2>${modelAndView}</h2>
+    <h2>Map:${paramMap}</h2>
 </body>
 </html>
