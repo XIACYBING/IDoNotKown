@@ -20,6 +20,7 @@
         <module>websample</module>
         <module>multithread</module>
         <module>springconfigsample</module>
+        <module>springJavaConfigSample</module>
     </modules>
 
     <dependencies>
