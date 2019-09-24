@@ -1,5 +1,7 @@
 package com.hk.xia.spring.initializer;
 
+import com.hk.xia.spring.config.RootConfig;
+import com.hk.xia.spring.config.WebConfig;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
@@ -8,14 +10,15 @@ import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatche
  * @description SpringMvc上下文加载器
  */
 public class MvcContextInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[0];
+        return new Class<?>[] {RootConfig.class};
     }
 
     @Override
     protected Class<?>[] getServletConfigClasses() {
-        return new Class[] {};
+        return new Class<?>[] {WebConfig.class};
     }
 
     @Override
