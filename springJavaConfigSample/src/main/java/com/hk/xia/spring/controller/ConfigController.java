@@ -12,8 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ConfigController {
 
     @RequestMapping("/start")
-    public void start(){
+    public String start(){
         System.out.println("purity Java Config Success.....");
+        return "start";
     }
 
 }

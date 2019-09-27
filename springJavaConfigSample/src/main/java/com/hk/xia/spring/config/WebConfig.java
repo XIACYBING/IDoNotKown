@@ -40,7 +40,10 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public ViewResolver viewResolver(){
         System.out.println("WebConfig.viewResolver().....");
-        return new InternalResourceViewResolver("/WEB-INF/jsp", ".jsp");
+        InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
+        internalResourceViewResolver.setPrefix("/WEB-INF/");
+        internalResourceViewResolver.setSuffix(".jsp");
+        return internalResourceViewResolver;
     }
 
     @Override
@@ -91,7 +94,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void configureViewResolvers(ViewResolverRegistry viewResolverRegistry) {
-
+        /*viewResolverRegistry.jsp().prefix("/WEB-INF/").suffix(".jsp");*/
     }
 
     @Override
