@@ -36,7 +36,7 @@ public class CrudTest {
         Employee employee = new Employee();
         Long startTime;
         Long endTime;
-        Long[] milis = new Long[10];
+        Long[] millis = new Long[10];
         for (int i = LOOP_START; i < LOOP_END;i++){
 
             SqlSession sqlSession = sessionFactory.openSession(false);
@@ -54,7 +54,7 @@ public class CrudTest {
 
                 /*更新名称*/
                 /*employee.setEId(l);
-                employee.setEName("inserrNNnNNnN" + l);
+                employee.setEName("insertNNnNNnN" + l);
                 employeeMapper.updateById(employee);*/
 
                 /*删除数据*/
@@ -62,12 +62,12 @@ public class CrudTest {
 
             }
             endTime = System.currentTimeMillis();
-            milis[i] = endTime - startTime;
+            millis[i] = endTime - startTime;
             sqlSession.close();
         }
         StringBuilder millisTime = new StringBuilder();
         Long count = 0L;
-        for (Long milli : milis) {
+        for (Long milli : millis) {
             millisTime.append(milli).append("、");
             count += milli;
         }

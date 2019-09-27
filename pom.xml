@@ -9,17 +9,17 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>dubbosampleapi</module>
-        <module>dubbosampleprovider</module>
-        <module>dubbosampleconsumer</module>
-        <module>dubbosampleprovider2</module>
-        <module>rocketMqsampleproducer</module>
-        <module>rocketMqsampleconsumer</module>
-        <module>tkMyBatissample</module>
-        <module>myBatisPlussample</module>
-        <module>websample</module>
-        <module>multithread</module>
-        <module>springconfigsample</module>
+        <module>dubboSampleApi</module>
+        <module>dubboSampleProvider</module>
+        <module>dubboSampleConsumer</module>
+        <module>dubboSampleProvider2</module>
+        <module>rocketMqSampleProducer</module>
+        <module>rocketMqSampleConsumer</module>
+        <module>tkMyBatisSample</module>
+        <module>myBatisPlusSample</module>
+        <module>webSample</module>
+        <module>multiThread</module>
+        <module>springConfigSample</module>
         <module>springJavaConfigSample</module>
     </modules>
 
