@@ -40,6 +40,7 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public ViewResolver viewResolver(){
         System.out.println("WebConfig.viewResolver().....");
+        /*对于资源的前缀和后缀设置，不要直接在构造器中设置，Idea会识别不了导致无法解析资源（该问题不会影响程序运行，但是代码会报警）*/
         InternalResourceViewResolver internalResourceViewResolver = new InternalResourceViewResolver();
         internalResourceViewResolver.setPrefix("/WEB-INF/");
         internalResourceViewResolver.setSuffix(".jsp");
