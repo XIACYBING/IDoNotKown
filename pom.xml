@@ -52,6 +52,12 @@
             <artifactId>lombok</artifactId>
             <version>1.18.8</version>
         </dependency>
+        <!--fastJson支持-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.58</version>
+        </dependency>
     </dependencies>
 
     <build>
