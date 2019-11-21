@@ -14,7 +14,7 @@ import org.springframework.test.context.support.AnnotationConfigContextLoader;
 /**
  * @author wang.yubin
  * @date 2019/9/29
- * @description 测试怎么在
+ * @description
  */
 @SpringJUnitConfig(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = {MvcContextInitializer.class, WebConfig.class, InitialBeanConfig.class}, loader = AnnotationConfigContextLoader.class)

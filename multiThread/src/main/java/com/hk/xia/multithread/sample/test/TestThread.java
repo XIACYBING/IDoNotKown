@@ -1,7 +1,7 @@
 package com.hk.xia.multithread.sample.test;
 
 import com.hk.xia.multithread.sample.thread.ExThread;
-import com.hk.xia.multithread.sample.thread.ImRunable;
+import com.hk.xia.multithread.sample.thread.ImRunnable;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -17,7 +17,7 @@ public class TestThread {
     public static void main(String[] args) {
         logger.info("TestThread Main Method Run ...");
         ExThread exThread = new ExThread();
-        ImRunable imRunable = new ImRunable();
+        ImRunnable imRunable = new ImRunnable();
         Thread thread = new Thread(imRunable);
         exThread.setPriority(Thread.MIN_PRIORITY);
         thread.setPriority(Thread.MAX_PRIORITY);
