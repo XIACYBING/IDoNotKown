@@ -21,6 +21,7 @@
         <module>multiThread</module>
         <module>springConfigSample</module>
         <module>springJavaConfigSample</module>
+        <module>bussinessDevelop</module>
     </modules>
 
     <dependencies>
