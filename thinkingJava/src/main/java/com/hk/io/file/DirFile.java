@@ -1,5 +1,6 @@
 package com.hk.io.file;
 
+import net.mindview.util.TextFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -34,7 +35,6 @@ public class DirFile {
         }else {
             logger.info("Second is null");
         }
-
     }
 
 }
