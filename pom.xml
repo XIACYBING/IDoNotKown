@@ -22,6 +22,7 @@
         <module>springConfigSample</module>
         <module>springJavaConfigSample</module>
         <module>thinkingJava</module>
+        <module>bussinessDevelop</module>
     </modules>
 
     <dependencies>
