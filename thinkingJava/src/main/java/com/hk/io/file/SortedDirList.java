@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.net.URI;
 import java.util.Arrays;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.regex.Pattern;
 
 /**
@@ -74,8 +75,20 @@ public class SortedDirList extends File {
                 fileCharNumber += fileLine.length();
             }
             logger.info("[{}]文件的行数为：[{}]，文件字符长度为：[{}]", seizePath, lineNumber, fileCharNumber);
-
         }
+
+        /*验证文件大小和字符大小是否相同，DisturbFile的文件大小是10Byte*/
+        SortedDirList sizeComputeObject = new SortedDirList(pathString);
+        String[] sizeComputeArray = sizeComputeObject.list("Dis\\w+");
+        AtomicInteger size = new AtomicInteger();
+        for (String fileName : sizeComputeArray) {
+            new TextFile(pathString.concat(fileName)).forEach(sizeLine -> {
+                size.addAndGet(sizeLine.length());
+                logger.info("size:[{}],content:[{}]", sizeLine.length(), sizeLine);
+            });
+        }
+        logger.info("DisturbFileSize:[{}]", size);
+
 
     }
 
