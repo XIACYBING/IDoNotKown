@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Date;
 import java.util.List;
 
 /**
@@ -16,6 +17,8 @@ import java.util.List;
 public class ObjectReference {
 
     private static final Logger logger = LoggerFactory.getLogger(ObjectReference.class);
+
+    public Date currentDate = new Date(System.currentTimeMillis());
 
     public static void main(String[] args) {
         Long a = 10L;
@@ -30,8 +33,26 @@ public class ObjectReference {
 
         Integer c = 11;
         objectReference.changeNumber(c);
-        /*包装类在类之内传递的也不是引用*/
+        /*包装类在类之内传递的是引用，但是在做运算符操作时会进行自动拆箱和自动装箱，产生了新对象，导致原来的运算结果体现不到原对象上*/
         logger.info("c:[{}]", c);
+
+        Date currentDate = new Date(System.currentTimeMillis());
+        /*currentDate:[Thu Nov 28 10:41:55 CST 2019] */
+        logger.info("currentDate:[{}]", currentDate);
+        Date modifiedDate = objectReference.modifyTime(currentDate);
+        /*currentDate:[Thu Nov 28 10:43:35 CST 2019],modifiedDate:[Thu Nov 28 10:43:35 CST 2019]*/
+        logger.info("currentDate:[{}],modifiedDate:[{}]", currentDate, modifiedDate);
+
+        /*直接赋值方式传递的还是引用，对thisDate的任何修改都会反应到objectReference.currentDate上，如果需要创建对象的话，用new Date()*/
+        logger.info("objectReference.currentDate:[{}]", objectReference.currentDate);
+        Date thisDate = objectReference.currentDate;
+        objectReference.modifyTime(thisDate);
+        logger.info("thisDate:[{}], objectReference.currentDate:[{}]", thisDate, objectReference.currentDate);
+    }
+
+    private Date modifyTime(Date currentDate) {
+        currentDate.setTime(currentDate.getTime() + 100000L);
+        return currentDate;
     }
 
     private ObjectReference(Long testNumber, List<Long> testList) {
@@ -45,6 +66,7 @@ public class ObjectReference {
 
     private void changeNumber(Integer testNumber) {
         testNumber += 10;
+        testNumber = testNumber + 10;
     }
 
 }
