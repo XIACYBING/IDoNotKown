@@ -22,7 +22,7 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>5.1.47</version>
+            <version>8.0.16</version>
         </dependency>
         <!--TkMyBatis代码生成器模板引擎-->
         <dependency>
@@ -86,7 +86,7 @@
                     <dependency>
                         <groupId>mysql</groupId>
                         <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.29</version>
+                        <version>8.0.16</version>
                     </dependency>
                     <!-- 如果你只需要用到通用 Mapper 中的插件，可以只引入 mapper-generator -->
                     <!-- 注意，这个包不需要和 mapper 同时引入，mapper 中包含 generator -->
